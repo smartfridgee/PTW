@@ -1,145 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
-
-:root {
-  --color-primary: #081C15;
-  --color-secondary: #1B4332;
-  --color-primary-light: #D8F3DC;
-
-  --padding-inline: 4rem;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
+html {
+  /*background: whitesmoke;*/
+  background-image: url("https://img.freepik.com/premium-photo/watercolor-paper-texture-background-seamless-texture-tile-ready_463999-10308.jpg?semt=ais_hybrid&w=740&q=80");
 }
 
 body {
-  background: #D8F3DC;
-  background: linear-gradient(160deg,rgba(216, 243, 220, 1) 1%, rgba(183, 228, 199, 1) 100%);
+  max-width: 1100px !important;
+  margin: auto;
 }
-
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  /*grid-column-gap: 7rem;*/
+  grid-template-columns: 1fr 3fr;
+  overflow: hidden;
+  /*grid-auto-rows: min-content;*/
 }
 
-header {
-  grid-column: 1 / -1;
-  padding-inline: var(--padding-inline);
-  height: 14rem;
-  display: flex;
-  align-items: center;
-  box-shadow: .5rem .25rem .25rem rgba(0, 0, 0, 0.1);
-  background-color: #74C69D;
-  background-image: url("https://aws-obg-image-lb-1.tcl.com/content/dam/brandsite/global/image-for-blog-guide/choosing-a-quiet-refrigerator-pc.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
-
-  z-index: 999;
-}
-
-hr {
-  border: none;
-  border-bottom: 1px dotted var(--color-primary);
-  /*height: 1px;*/
-  background-color: #74C69D;
-}
-
-h1, h2, h3, p, li {
-  color: var(--color-primary);
-  font-family: "Bricolage Grotesque", sans-serif;
-}
-
-h2 {
-  margin-top: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
-}
-
-h3 {
-  margin-top: 1.5rem !important;
-  font-style: italic;
-}
-
-p, li {
-  color: var(--color-secondary) !important;
+img {
+  width: 100%;
+  height: auto;
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: var(--color-primary-light);
+  font-size: 2.1rem;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+a {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  text-decoration: none;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-p {
-  text-align: justify;
-  line-height: 140%;
+h3 {
+  padding: .3rem;
+  background: #ffffff;
+  background: linear-gradient(185deg, rgba(255, 255, 255, 1) 1%, rgba(247, 247, 37, 1) 100%);
+  border: 1px solid black;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.section_2 {
-  background-color: #B7E4C7;
+header {
+  height: 100%;
+  grid-column: 1;
+  grid-row: 1 / 500;
+  background-color: darkred;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.vintage_list {
+  border-top: 1px solid white;
+  padding: 0;
+  padding-top: 1.75rem;
+  list-style: none;
+}
+
+.vintage_list > * {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.reklama {
+  margin-top: 2rem;
+  width: 100%;
+  height: 320px;
+  background-image: url("https://blog.adobe.com/en/publish/2017/08/06/media_d9eed0aaf19e49f2b6d77cfd26407474b293573d.gif");
+  background-size: cover;
 }
 
 .section_1, .section_2 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-  padding-inline: var(--padding-inline);
-}
-
-.img1_1 {
-  width: 100%;
-  border-radius: .5rem;
-  margin-top: .5rem;
-}
-
-.img1_2, .img1_3 {
-  width: 100%;
-  height: 10rem;
-  border-radius: .5rem;
-  object-fit: cover;
-  margin-top: .5rem;
+  grid-column: 2 / span 3;
+  margin: 1rem;
+  padding-inline: 1rem;
+  border-style: inset;
+  background-color: white;
 }
 
 footer {
-  background-color: #081C15;
-  grid-column: 1 / -1;
-}
-
-footer p {
+  grid-column: 2 / span 3;
+  height: 100%;
+  background-color: navy;
+  margin-inline: 1rem;
+  color: white;
   text-align: center;
-  color: var(--color-primary-light) !important;
+  text-decoration: underline;
+
 }
 
 .img2_1 {
-  width: 100%;
-  height: 8rem;
-  object-fit: cover;
-  border-radius: .5rem;
-
-  margin-top: 1.5rem !important;
-}
-
-.section_2 h2 {
-  margin-top: 1.5rem !important;
+  display: none;
 }
 
 .participantos {
-  list-style: none;
-  padding-inline: 1.5rem;
-}
-
-.participantos > * {
-  padding-bottom: .5rem;
-  padding-top: .5rem;
-  border-bottom: 1px dotted var(--color-primary);
-}
-
-.participantos > *:last-child {
-  border-bottom: none;
+  list-style-image: url('https://blob.gifcities.org/gifcities/KHAUZWE7YZPGNENO5UPAA7CLOJICCBJC.gif');
 }
 
 .winners {
@@ -153,21 +113,18 @@ footer p {
 .winners > * {
   height: fit-content;
   width: 100%;
-  background-color: #D8F3DC;
-  border-radius: .5rem;
-  overflow: hidden;
 }
 
 .winners .li1 {
-  border-bottom: .5rem solid #FFBF00;
+  border: 4px solid #FFBF00;
 }
 
 .winners .li2 {
-  border-bottom: .5rem solid #C0C0C0;
+  border: 3px dashed #C0C0C0;
 }
 
 .winners .li3 {
-  border-bottom: .5rem solid #977547;
+  border: 2px dotted #977547;
 }
 
 .winners li img {
@@ -180,6 +137,15 @@ footer p {
   text-align: center;
 }
 
+.winners li p.owner {
+  font-size: 1.2rem;
+}
+
+.winners li.li1 p.owner {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .winners li p.miejsce {
   font-size: .75rem;
   font-style: italic;
@@ -187,23 +153,21 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  :root {
-    --padding-inline: 2rem;
-  }
-
-  main {
-    grid-template-columns: 1fr;
-  }
-
   header {
-    background-position: center center;
+    width: 100%;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .section_1, .section_2, footer {
+    grid-column: 1 / span 2;
   }
 
   .winners {
     grid-template-columns: 1fr;
   }
-}
 
-.vintage_list, .reklama {
-  display: none;
+  footer {
+    margin-inline: 0px;
+  }
 }
