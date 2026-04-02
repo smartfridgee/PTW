@@ -14,7 +14,7 @@ class Todo {
     }
 
     if (date < new Date().toISOString().split('T')[0] && date !== '') {
-      alert('Data musi być dzisiejsza lub przyszła.')
+      alert('Data musi być pusta lub w przyszłości.')
       return
     }
 
@@ -81,7 +81,7 @@ class Todo {
         const newValue = input.value
 
         if (newValue < new Date().toISOString().split('T')[0] && newValue !== '') {
-          alert('Data musi być dzisiejsza lub przyszła.')
+          alert('Data musi być pusta lub w przyszłości.')
           this.Draw()
           return
         }
