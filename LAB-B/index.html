@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bastian Wierzchnicki (57947) - PTW LAB B</title>
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <img src="assets/petarda.gif" alt="Logo" class="logo">
+    <main>
+        <input type="text" id="search_input" placeholder="Search..." oninput="document.todo.filter = this.value; document.todo.Draw()">
+        <ul class="items" id="items">
+            <!-- <div class="item">
+                <span>#NAZWA</span>
+                <span>2026-03-51</span>
+                <button>#DELETE</button>
+            </div> -->
+        </ul>
+        <div class="grid">
+            <input type="text" id="new_item_input" placeholder="New item name...">
+            <input type="date" id="new_item_date">
+            <button id="add_item_button" onclick="document.todo.Add()">Add Item</button>
+        </div>
+    </main>
+</body>
+</html>
