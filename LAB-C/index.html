@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bastian Wierzchnicki (57947) - PTW LAB C</title>
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="scripts.js" defer></script>
+    <script src='https://unpkg.com/leaflet-image@0.4.0/leaflet-image.js'></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+<body>
+    <div class="main">
+
+        <div class="maps">
+            <div id="map"></div>
+            <canvas id="rasterMap" width="600" height="300"></canvas>
+            <div class="buttons">
+                <button id="getLocation">Moja lokalizacja</button>
+                <button id="saveButton">Pobierz mapę</button>
+            </div>
+            <div id="tiles" class="tiles"></div>
+            <div class="tiles_game"></div>
+        </div>
+    </div>
+</body>
+</html>

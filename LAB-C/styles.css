@@ -1,0 +1,54 @@
+:root {
+  --map-height: 300px;
+  --map-width: 600px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#rasterMap, #map, .tiles, .tiles_game {
+  height: var(--map-height);
+  width: var(--map-width);
+  border: 1px solid black;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+}
+
+.maps {
+  display: grid;
+  margin-top: 40px;
+  height: 100%;
+  grid-template-columns: 600px 600px;
+  gap: 20px;
+  align-items: center;
+  padding-inline: 90px;
+}
+
+.maps > * {
+  justify-self: center;
+}
+
+.buttons {
+  grid-column: span 2;
+  justify-self: normal;
+}
+
+.tiles_game, .tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  box-sizing: border-box;
+  overflow: hidden;
+  /* gap: 10px; */
+}
+
+.tile {
+  background-color: lightgray;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 75px;
+  width: 150px;
+}
