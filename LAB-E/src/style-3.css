@@ -1,0 +1,178 @@
+html {
+  background: whitesmoke;
+}
+
+body {
+  /* max-width: 00px !important; */
+  margin: auto;
+}
+
+* {
+  font-family: "Comis Sans MS", cursive, sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  overflow: hidden;
+  /*grid-auto-rows: min-content;*/
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2.1rem;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+a {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+h3 {
+  padding: .3rem;
+  background: pink;
+  border: 1px solid black;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  height: 100%;
+  grid-column: 1;
+  grid-row: 1 / 500;
+  background-color: pink;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.vintage_list {
+  border-top: 1px solid pink;
+  padding: 0;
+  padding-top: 1.75rem;
+  list-style: none;
+}
+
+.vintage_list > * {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.section_1, .section_2 {
+  grid-column: 2 / span 3;
+  margin: 1rem;
+  padding-inline: 1rem;
+  border-style: inset;
+  background-color: white;
+}
+
+footer {
+  grid-column: 2 / span 3;
+  height: 100%;
+  background-color: pink;
+  margin-inline: 1rem;
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+
+}
+
+.img2_1 {
+  display: none;
+}
+
+.participantos {
+  list-style-image: url('https://blob.gifcities.org/gifcities/KHAUZWE7YZPGNENO5UPAA7CLOJICCBJC.gif');
+}
+
+.winners {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.winners > * {
+  height: fit-content;
+  width: 100%;
+}
+
+.winners .li1 {
+  border: 4px solid #FFBF00;
+}
+
+.winners .li2 {
+  border: 3px dashed #C0C0C0;
+}
+
+.winners .li3 {
+  border: 2px dotted #977547;
+}
+
+.winners li img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.winners li p {
+  text-align: center;
+}
+
+.winners li p.owner {
+  font-size: 1.2rem;
+}
+
+.winners li.li1 p.owner {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.winners li p.miejsce {
+  font-size: .75rem;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .section_1, .section_2, footer {
+    grid-column: 1 / span 2;
+  }
+
+  .winners {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    margin-inline: 0px;
+  }
+}
+
+#buttons {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  z-index: 1000;
+}
