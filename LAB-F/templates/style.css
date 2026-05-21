@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #f7e1d7;
+    --secondary-color: #dedbd2;
+    --background-color: #b0c4b1;
+    --text-color: #131515;
+    --border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    padding: 0;
+    margin: 0 0 18px;
+}
+
+.wrapper {
+    background: var(--primary-color);
+    border: var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    min-width: 800px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flex-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.flex-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    border: var(--border);
+    border-radius: 12px;
+}
+
+textarea, pre {
+    height: 360px;
+    padding: 8px;
+    border: var(--border);
+    border-radius: 14px;
+    font-family: monospace;
+    font-size: 13px;
+    box-sizing: border-box;
+    margin: 0;
+    resize: both;
+}
+
+pre {
+    background-color: #fff;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4a5759;
+    border: var(--border);
+    border-radius: 14px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    transition: 0.1s;
+}
+
+button:hover {
+    background: #384243;
+}
