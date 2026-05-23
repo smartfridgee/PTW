@@ -8,14 +8,22 @@ $router = new \App\Service\Router();
 
 $action = $_REQUEST['action'] ?? null;
 switch ($action) {
-    case 'post-index':
+    case 'car-index':
     case null:
+        $controller = new \App\Controller\CarController();
+        $view = $controller->indexAction($templating, $router);
+        break;
+    case 'post-index':
         $controller = new \App\Controller\PostController();
         $view = $controller->indexAction($templating, $router);
         break;
     case 'post-create':
         $controller = new \App\Controller\PostController();
         $view = $controller->createAction($_REQUEST['post'] ?? null, $templating, $router);
+        break;
+    case 'car-create':
+        $controller = new \App\Controller\CarController();
+        $view = $controller->createAction($_REQUEST['car'] ?? null, $templating, $router);
         break;
     case 'post-edit':
         if (! $_REQUEST['id']) {
@@ -24,6 +32,13 @@ switch ($action) {
         $controller = new \App\Controller\PostController();
         $view = $controller->editAction($_REQUEST['id'], $_REQUEST['post'] ?? null, $templating, $router);
         break;
+    case 'car-edit':
+        if (! $_REQUEST['id']) {
+            break;
+        }
+        $controller = new \App\Controller\CarController();
+        $view = $controller->editAction($_REQUEST['id'], $_REQUEST['car'] ?? null, $templating, $router);
+        break;
     case 'post-show':
         if (! $_REQUEST['id']) {
             break;
@@ -31,11 +46,25 @@ switch ($action) {
         $controller = new \App\Controller\PostController();
         $view = $controller->showAction($_REQUEST['id'], $templating, $router);
         break;
+    case 'car-show':
+        if (! $_REQUEST['id']) {
+            break;
+        }
+        $controller = new \App\Controller\CarController();
+        $view = $controller->showAction($_REQUEST['id'], $templating, $router);
+        break;
     case 'post-delete':
         if (! $_REQUEST['id']) {
             break;
         }
         $controller = new \App\Controller\PostController();
+        $view = $controller->deleteAction($_REQUEST['id'], $router);
+        break;
+    case 'car-delete':
+        if (! $_REQUEST['id']) {
+            break;
+        }
+        $controller = new \App\Controller\CarController();
         $view = $controller->deleteAction($_REQUEST['id'], $router);
         break;
     case 'info':
