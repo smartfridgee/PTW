@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<h1>Cars List</h1>
+
+<a href="<%= router.generatePath('car-create') %>">Create new</a>
+
+<ul class="index-list">
+    <% cars.forEach(function(car) { %>
+        <li>
+            <h3><%= car.getBrand() %> <%= car.getModel() %></h3>
+            <ul class="action-list">
+                <li><a href="<%= router.generatePath('car-show', {id: car.getId()}) %>">Details</a></li>
+                <li><a href="<%= router.generatePath('car-edit', {id: car.getId()}) %>">Edit</a></li>
+            </ul>
+        </li>
+    <% }); %>
+</ul>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+
+<h1>Create Car Entry</h1>
+<form action="<%= router.generatePath('car-create') %>" method="post" class="edit-form">
+    <%- include('_form') %>
+    <input type="hidden" name="action" value="car-create">
+</form>
+
+<a href="<%= router.generatePath('car-index') %>">Back to list</a>
+
+<%- include('../partials/footer') %>

@@ -148,7 +148,7 @@
       <path value="$PROJECT_DIR$/LAB-H/vendor/symfony/polyfill-intl-grapheme" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.5">
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStan">
