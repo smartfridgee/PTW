@@ -1,0 +1,15 @@
+{
+  "electron": {
+    "windows": {
+      "package": [
+        "zip"
+      ]
+    },
+    "mac": {
+      "package": [
+        "dmg",
+        "zip"
+      ]
+    }
+  }
+}
